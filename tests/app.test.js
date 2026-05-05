@@ -1,5 +1,9 @@
-const add = require('../src/app');
+const request = require('supertest');
+const app = require('../src/app');
 
-test('adds 2 + 3 to equal 5', () => {
-  expect(add(2, 3)).toBe(5);
+describe('GET /', () => {
+  it('should return success message', async () => {
+    const res = await request(app).get('/');
+    expect(res.text).toBe('CI/CD PoC Application is running successfully on Feature branch');
+  });
 });
