@@ -4,6 +4,6 @@ const app = require('../src/app');
 describe('GET /', () => {
   it('should return success message', async () => {
     const res = await request(app).get('/');
-    expect(res.text).toBe('CI/CD POC Application is running successfully on Feature branch');
+    expect(res.text).toBe('CI/CD POC Application is running successfully on Feature branch..Done');
   });
 });
