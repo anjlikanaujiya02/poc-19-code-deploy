@@ -1,5 +1,5 @@
-function add(a, b) {
-  return a + b;
+function printMessage() {
+  console.log("POC-19 print function executed");
 }
 
-module.exports = add;
+module.exports = printMessage;
