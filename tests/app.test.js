@@ -1,5 +1,11 @@
-const add = require('../src/app');
+const printMessage = require('../src/app');
 
-test('adds 2 + 3 to equal 5', () => {
-  expect(add(2, 3)).toBe(5);
+test('should print the correct message', () => {
+  console.log = jest.fn();   // mock console.log
+
+  printMessage();
+
+  expect(console.log).toHaveBeenCalledWith(
+    "POC-19 print function executed"
+  );
 });
